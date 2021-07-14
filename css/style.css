@@ -19,49 +19,76 @@ body {
 }
 .header {
     background-color: #2D25A0;
+    margin-top: -172px;
 }
 .header-title {
     font-size: 64px;
     color: #FFFFFF;
     margin-left: 183px;
     margin-top: 172px;
-    position: absolute;
 }
-
 .link-button {
     background-color: #E02C6D;
     color: #FFFFFF;
     font-size: 16px;
     padding: 10px 24px; 
     text-decoration: none;
-    margin-left: 153px;
-   
+    margin-left: 156px; 
 }
 .header-right{
-  padding-bottom: 86px;
+ margin-top: -591px;
+ padding-bottom: 86px;
 }
 .header-right img {
     width: 556px;
     height: 438px;
-    margin-top: 153px;
+    margin-top: 250px;
     margin-left: 743px;
 }
+/* Transform and Transition */
 
-/* Players Style */
+.header-right .field .ball{
+    width: 50px;
+    height: 50px;
+    background-color:rgba(20, 233, 222, 0.918);
+    border-radius: 25px;
+    position: relative;
+    left: 825px;
+    top: -300px;
+    transition: transform 1s ease-out 0.3s;
+}
+.header-right .field:hover .ball{
+   transform: translate(-1000px,100px);
+}
+.header-right .field .kick img{
+    height: 300px;
+    width: 300px;
+    margin-left: 490px;
+    margin-top: 20px;
+}
+.header-right .field .kick{
+    transition: transform 0.1s ease-in-out;
+}
+.header-right .field:hover .kick{
+    transform: rotate(60deg);
+    transform-origin: top right;
+}
+
+/* ---------------
+  Top Player styles 
+------------------*/
 .top-players {
     width: 1050px;
     height: 474px;
     margin-left: 180px;
-    margin-top: 70px;
+    margin-top: -40px;
 }
-
 .players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
 }
-
 .player {
     width: 330px;
     height: 456px;
@@ -74,29 +101,26 @@ body {
     height: 256px;
     padding: 15px;
 }
-
 .player-info {
     height: 154px;
     padding: 15px;
     margin-top: -16px;
 }
-
 .player-name {
     height: 40px;
     color: #18191F;
     font-size: 28px;
     margin: 10px 0px;
 }
-
 .player-detail {
     font-size: 16px;
     color: #6C6C6C;
     margin: 10px 0px;
 }
 
-/* --------------
+/* ---------------
 top Highlights styles 
------------------*/
+------------------*/
 .top-highlights{
     width: 1050px;
     margin-left:180px;
@@ -126,7 +150,9 @@ top Highlights styles
     padding: 10px 24px; 
     text-decoration: none;
 }
-/* footer style */
+/* ---------------
+footer  styles 
+------------------*/
 .footer {
     width: 483px;
     height: 201px;
@@ -134,15 +160,12 @@ top Highlights styles
     margin-left: 478px;
     align-items: center;
 }
-
 .football-logo img {
     width: 483px;
     height: 110px;
     margin: 20px 0px;
     margin-bottom: 20px;
-
 }
-
 .social-icon {
     display: flex;
     grid-column-gap: 14px;
@@ -153,7 +176,6 @@ top Highlights styles
     margin-left: 157px;
     margin-bottom: 20px;
 }
-
 .footer-detail {
     color: #000000;
     font-size: 18px;
@@ -168,27 +190,24 @@ top Highlights styles
         width: 100%;
     }
 
-    .players {
+    .players, .top-highlights {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .header, .footer {
-        flex-direction: column;
+    .header, .top-highlight, .footer {
+       flex-direction: column;
     }
 }
-
 /* For Tablet Devices */
 
 @media only screen and (min-width:688px) and (max-width:1024px) {
     .container {
         width: 100%;
     }
-
-    .players {
+    .players, .top-highlights {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .header, .footer {
-        flex-direction: column;
+    .header, .top-highlight, .footer {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
