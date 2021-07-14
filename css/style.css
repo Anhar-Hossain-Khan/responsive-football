@@ -126,3 +126,69 @@ top Highlights styles
     padding: 10px 24px; 
     text-decoration: none;
 }
+/* footer style */
+.footer {
+    width: 483px;
+    height: 201px;
+    margin-top: 140px;
+    margin-left: 478px;
+    align-items: center;
+}
+
+.football-logo img {
+    width: 483px;
+    height: 110px;
+    margin: 20px 0px;
+    margin-bottom: 20px;
+
+}
+
+.social-icon {
+    display: flex;
+    grid-column-gap: 14px;
+    justify-content: space-between;
+    width: 170px;
+    height: 32px;
+    font-size: 18px;
+    margin-left: 157px;
+    margin-bottom: 20px;
+}
+
+.footer-detail {
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Media Queries */
+/* For Mobile Devices */
+
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .header, .footer {
+        flex-direction: column;
+    }
+}
+
+/* For Tablet Devices */
+
+@media only screen and (min-width:688px) and (max-width:1024px) {
+    .container {
+        width: 100%;
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header, .footer {
+        flex-direction: column;
+    }
+}
